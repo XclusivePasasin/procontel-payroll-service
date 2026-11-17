@@ -1,0 +1,34 @@
+[Unit]
+Description=Procontel payroll API
+After=network.target
+
+[Service]
+Type=simple
+User=procontel
+Group=procontel
+WorkingDirectory=/opt/procontel/backend
+EnvironmentFile=/etc/procontel/app.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/procontel/backend/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 1 --no-access-log --no-proxy-headers
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+LimitCORE=0
+MemoryMax=768M
+TasksMax=64
+CPUQuota=200%
+
+[Install]
+WantedBy=multi-user.target

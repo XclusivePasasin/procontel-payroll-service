@@ -1,0 +1,44 @@
+{
+  "name": "procontel-boletas",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "format": "prettier --write src",
+    "format:check": "prettier --check src",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "class-variance-authority": "0.7.1",
+    "clsx": "2.1.1",
+    "date-fns": "4.4.0",
+    "lucide-react": "0.468.0",
+    "radix-ui": "1.8.1",
+    "react": "19.2.0",
+    "react-day-picker": "10.0.2",
+    "react-dom": "19.2.0",
+    "tailwind-merge": "3.7.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.1",
+    "@playwright/test": "1.65.1",
+    "@tailwindcss/vite": "4.1.17",
+    "@types/react": "19.2.5",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.1.1",
+    "eslint": "9.39.1",
+    "eslint-plugin-react-hooks": "7.0.1",
+    "globals": "16.5.0",
+    "prettier": "3.6.2",
+    "tailwindcss": "4.1.17",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.72.2",
+    "vite": "7.3.8"
+  },
+  "overrides": {
+    "minimatch": "11.0.8"
+  }
+}

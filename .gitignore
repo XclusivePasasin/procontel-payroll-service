@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+node_modules/
+dist/
+tmp/
+*.xlsx
+*.pdf
+*.zip
+!backend/app/assets/fonts/*
+.env
+secrets/
+*.htpasswd
+*.tsbuildinfo
